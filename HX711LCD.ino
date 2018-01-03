@@ -1,5 +1,6 @@
 #include <Arduino.h>
 /*This example code uses bogde's excellent library: https://github.com/bogde/HX711
+An Arduino library to interface the Avia Semiconductor HX711 24-Bit Analog-to-Digital Converter (ADC) for Weight Scales.
 
  bogde's library is released under a GNU GENERAL PUBLIC LICENSE
 
@@ -37,7 +38,7 @@ void setup()
   lcd.begin(16, 2);
   // Print a message to the LCD.
   lcd.setCursor(0, 0);
-  lcd.print("LCD Key Shield");
+  lcd.print("IBE Scale");
   lcd.setCursor(0, 1);
   lcd.print("Press Key:");
 
@@ -58,16 +59,6 @@ void setup()
   lcd.clear();
 } /*--(end setup )---*/
 
-/*
- Adjust to your own needs
-  matrix.setPosition(0, 0, 0); // The first display is at <0, 0>
-  matrix.setPosition(1, 1, 0); // The second display is at <1, 0>
-  matrix.setPosition(2, 2, 0); // The third display is at <2, 0>
-  matrix.setPosition(3, 3, 0); // And the last display is at <3, 0>
-  ...
-  matrix.setRotation(0, 2);    // The first display is position upside down
-  matrix.setRotation(3, 2);    // The same hold for the last display
-*/
 int wait = 50;
 int inc = -2;
 
